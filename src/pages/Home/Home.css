@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.texto_superior {
+    text-align: center;
+    color: #FFFCF7;
+}
+
+img {
+    filter: hue-rotate(322deg);
+}
