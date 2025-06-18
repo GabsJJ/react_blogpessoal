@@ -4,22 +4,20 @@ function Home() {
             flex 
             justify-center
             bg-miriam-blue
-            font-poppins
         ">
             <div className="
                 container
                 grid 
                 grid-cols-2
+                items-center
                 text-ghost-white
             ">
                 <div className="
-                    flex
-                    flex-col
+                    flex flex-col
                     justify-center
                     items-center
                     gap-4
-                    py-4
-                    px-4
+                    py-4 px-4
                 ">
                     <h2 className="
                         text-4xl
@@ -33,26 +31,26 @@ function Home() {
                         justify-around
                         gap-4
                     ">
-                        <div className="
-                            rounded-full
-                            border-royal-blue
-                            bg-royal-blue
-                            py-2
-                            px-4
-                            hover:bg-royal-blue/65
-                        ">
-                            <p className="
-                                text-sm
-                                font-[600]
+                        <a href="">
+                            <div className="
+                                rounded-full
+                                border-royal-blue
+                                bg-royal-blue
+                                py-2 px-4
+                                hover:bg-royal-blue/65
                             ">
-                                Nova Postagem
-                            </p>
-                        </div>
+                                <p className="
+                                    text-sm
+                                    font-[600]
+                                ">
+                                    Nova Postagem
+                                </p>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div className="
-                    flex
-                    flex-col
+                    flex flex-col
                     items-center
                 ">
                     <img 
