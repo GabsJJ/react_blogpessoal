@@ -1,20 +1,68 @@
-import './Home.css';
-
 function Home() {
     return (
-        <div className='container'>
-            <div>
-                <div className='texto_superior'>
-                    <h2>Seja Bem Vinde!</h2>
-                    <p>Expresse aqui seus pensamentos e opniões</p>
+        <div className="
+            flex 
+            justify-center
+            bg-miriam-blue
+            font-poppins
+        ">
+            <div className="
+                container
+                grid 
+                grid-cols-2
+                text-ghost-white
+            ">
+                <div className="
+                    flex
+                    flex-col
+                    justify-center
+                    items-center
+                    gap-4
+                    py-4
+                    px-4
+                ">
+                    <h2 className="
+                        text-4xl
+                        font-[600]
+                    ">
+                        Olá, seja bem-vind@!
+                    </h2>
+                    <p className="text-lg">Expresse aqui seus pensamentos e opniões</p>
+                    <div className="
+                        flex
+                        justify-around
+                        gap-4
+                    ">
+                        <div className="
+                            rounded-full
+                            border-royal-blue
+                            bg-royal-blue
+                            py-2
+                            px-4
+                            hover:bg-royal-blue/65
+                        ">
+                            <p className="
+                                text-sm
+                                font-[600]
+                            ">
+                                Nova Postagem
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
-                <div>
+                <div className="
+                    flex
+                    flex-col
+                    items-center
+                ">
                     <img 
                         src="https://i.imgur.com/VpwApCU.png" 
                         alt="Imagem da Página Home" 
                         width="400px"
-                    />
+                        className="
+                            hue-rotate-322
+                            w-2/3
+                        "/>
                 </div>
             </div>
         </div>
