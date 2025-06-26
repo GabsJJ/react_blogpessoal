@@ -3,7 +3,6 @@ function Home() {
         <div className="
             flex 
             justify-center
-            bg-miriam-blue
         ">
             <div className="
                 container
@@ -35,9 +34,9 @@ function Home() {
                             <div className="
                                 rounded-full
                                 border-royal-blue
-                                bg-royal-blue
+                                bg-purple-rain
                                 py-2 px-4
-                                hover:bg-royal-blue/65
+                                hover:bg-purple-rain/65
                             ">
                                 <p className="
                                     text-sm

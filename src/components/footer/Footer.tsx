@@ -7,7 +7,7 @@ function Footer() {
     return (
         <div className="
             flex justify-center
-            bg-gradient-to-b from-miriam-blue to-black/45
+            bg-gradient-to-b from-purple-rain/0.5 to-purple-rain/30
             text-lavender
         ">
             <div className="
