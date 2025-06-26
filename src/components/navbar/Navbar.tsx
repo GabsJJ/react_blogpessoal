@@ -1,7 +1,18 @@
 import { AtIcon } from "@phosphor-icons/react";
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 
 function Navbar() {
+    const navigate = useNavigate()
+    const { handleLogout } = useContext(AuthContext)
+
+    function logout() {
+        handleLogout()
+        alert('O Usuário foi desconectado com sucesso!')
+        navigate('/')
+    }
+
     return (
         <div className='
             h-24 w-full
@@ -20,7 +31,7 @@ function Navbar() {
                 <li className="inline p-1"><a className="text-lg hover:text-lavender/30" href="">Temas</a></li>
                 <li className="inline p-1"><a className="text-lg hover:text-lavender/30" href="">Criar Tema</a></li>
                 <li className="inline p-1"><a className="text-lg hover:text-lavender/30" href="">Perfil</a></li>
-                <li className="inline p-1"><a className="text-lg hover:text-lavender/30" href="">Sair</a></li>
+                <li className="inline p-1"><Link to='' onClick={logout} className='text-lg hover:text-lavender/30'>Sair</Link></li>
             </ul>
         </div>
     )

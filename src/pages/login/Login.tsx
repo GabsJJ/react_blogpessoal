@@ -6,7 +6,7 @@ import { RotatingLines } from "react-loader-spinner";
 
 function Login() {
 
-     const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const { usuario, handleLogin, isLoading } = useContext(AuthContext)
 
@@ -18,7 +18,7 @@ function Login() {
         if (usuario.token !== "") {
             navigate('/home')
         }
-    }, [usuario])
+    }, [usuario, navigate])
 
     function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
         setUsuarioLogin({
@@ -33,60 +33,59 @@ function Login() {
     }
 
     return (
-        <>
-            <div className="grid grid-cols-1 h-full place-items-center font-bold ">
-                <form className="flex justify-center items-center flex-col w-1/2 gap-4 text-ghost-white" onSubmit={login}>
-                    <h2 className="text-5xl ">Entrar</h2>
-                    <div className="flex flex-col w-full">
-                        <label htmlFor="usuario">Usuário</label>
-                        <input
-                            type="text"
-                            id="usuario"
-                            name="usuario"
-                            placeholder="Usuario"
-                            className="border-2 border-payne-gray rounded p-2"
-                            value={usuarioLogin.usuario}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                        />
-                    </div>
-                    <div className="flex flex-col w-full">
-                        <label htmlFor="senha">Senha</label>
-                        <input
-                            type="password"
-                            id="senha"
-                            name="senha"
-                            placeholder="Senha"
-                            className="border-2 border-payne-gray rounded p-2"
-                            value={usuarioLogin.senha}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                        />
-                    </div>
-                    <button 
-                        type='submit' 
-                        className="rounded bg-royal-blue flex justify-center
-                                   hover:bg-royal-blue/50 text-white w-1/2 py-2">
-                        {isLoading ? <RotatingLines
-                            strokeColor="white"
-                            strokeWidth="5"
-                            animationDuration="0.75"
-                            width="24"
-                            visible={true}
-                        /> :
-                            <span>Entrar</span>
-                        }
-                    </button>
+        <div className="grid grid-cols-1 h-full place-items-center font-bold ">
+            <form className="flex justify-center items-center flex-col w-1/2 gap-4 text-ghost-white" 
+                onSubmit={login}>
+                <h2 className="text-5xl ">Entrar</h2>
+                <div className="flex flex-col w-full">
+                    <label htmlFor="usuario">Usuário</label>
+                    <input
+                        type="text"
+                        id="usuario"
+                        name="usuario"
+                        placeholder="Usuario"
+                        className="border-2 border-payne-gray rounded p-2"
+                        value={usuarioLogin.usuario}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    />
+                </div>
+                <div className="flex flex-col w-full">
+                    <label htmlFor="senha">Senha</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Senha"
+                        className="border-2 border-payne-gray rounded p-2"
+                        value={usuarioLogin.senha}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    />
+                </div>
+                <button 
+                    type='submit' 
+                    className="rounded bg-royal-blue flex justify-center
+                                hover:bg-royal-blue/50 text-white w-1/2 py-2">
+                    {isLoading ? <RotatingLines
+                        strokeColor="white"
+                        strokeWidth="5"
+                        animationDuration="0.75"
+                        width="24"
+                        visible={true}
+                    /> :
+                        <span>Entrar</span>
+                    }
+                </button>
 
-                    <hr className="border-payne-gray w-full" />
+                <hr className="border-payne-gray w-full" />
 
-                    <p>
-                        Ainda não tem uma conta?{' '}
-                        <Link to="/cadastro" className="text-lavender/75 hover:underline">
-                            Cadastre-se
-                        </Link>
-                    </p>
-                </form>
-            </div>
-        </>
+                <p>
+                    Ainda não tem uma conta?{' '}
+                    <Link to="/cadastro" className="text-lavender/75 hover:underline">
+                        Cadastre-se
+                    </Link>
+                </p>
+            </form>
+        </div>
     );
 }
 
