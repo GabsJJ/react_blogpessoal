@@ -28,7 +28,7 @@ function Navbar() {
                 </div>
 
             <ul className="flex justify-end basis-1/2">
-                <li className="inline p-1"><a className="text-lg hover:text-lavender/30" href="">Postagens</a></li>
+                <li className="inline p-1"><Link to='/postagens' className='text-lg hover:text-lavender/30'>Postagens</Link></li>
                 <li className="inline p-1"><Link to='/temas' className='text-lg hover:text-lavender/30'>Temas</Link></li>
                 <li className="inline p-1"><Link to='/cadastrartema' className='text-lg hover:text-lavender/30'>Criar Tema</Link></li>
                 <li className="inline p-1"><a className="text-lg hover:text-lavender/30" href="">Perfil</a></li>
