@@ -31,7 +31,7 @@ function Navbar() {
                 <li className="inline p-1"><Link to='/postagens' className='text-lg hover:text-lavender/30'>Postagens</Link></li>
                 <li className="inline p-1"><Link to='/temas' className='text-lg hover:text-lavender/30'>Temas</Link></li>
                 <li className="inline p-1"><Link to='/cadastrartema' className='text-lg hover:text-lavender/30'>Criar Tema</Link></li>
-                <li className="inline p-1"><a className="text-lg hover:text-lavender/30" href="">Perfil</a></li>
+                <li className="inline p-1"><Link to='/perfil' className='text-lg hover:text-lavender/30'>Perfil</Link></li>
                 <li className="inline p-1"><Link to='' onClick={logout} className='text-lg hover:text-lavender/30'>Sair</Link></li>
             </ul>
         </div>
