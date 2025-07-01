@@ -2,6 +2,7 @@ import { AtIcon } from "@phosphor-icons/react";
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
+import { ToastAlerta } from "../../utils/ToastAlerta";
 
 function Navbar() {
     const navigate = useNavigate()
@@ -9,7 +10,7 @@ function Navbar() {
 
     function logout() {
         handleLogout()
-        alert('O Usuário foi desconectado com sucesso!')
+        ToastAlerta("O usuário foi desconectado com sucesso!", "info")
         navigate('/')
     }
 
@@ -28,8 +29,8 @@ function Navbar() {
 
             <ul className="flex justify-end basis-1/2">
                 <li className="inline p-1"><a className="text-lg hover:text-lavender/30" href="">Postagens</a></li>
-                <li className="inline p-1"><a className="text-lg hover:text-lavender/30" href="">Temas</a></li>
-                <li className="inline p-1"><a className="text-lg hover:text-lavender/30" href="">Criar Tema</a></li>
+                <li className="inline p-1"><Link to='/temas' className='text-lg hover:text-lavender/30'>Temas</Link></li>
+                <li className="inline p-1"><Link to='/cadastrartema' className='text-lg hover:text-lavender/30'>Criar Tema</Link></li>
                 <li className="inline p-1"><a className="text-lg hover:text-lavender/30" href="">Perfil</a></li>
                 <li className="inline p-1"><Link to='' onClick={logout} className='text-lg hover:text-lavender/30'>Sair</Link></li>
             </ul>
